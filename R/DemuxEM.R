@@ -101,11 +101,11 @@ GenerateCellHashCallsDemuxEM <- function(barcodeMatrix, rawFeatureMatrixH5, meth
 		df$classification[is.na(df$classification)] <- 'Negative'
 		df$classification.global[is.na(df$classification.global)] <- 'Negative'
 
-		for (name in c('.ambient_hashtag.hist.pdf', '.real_content.hist.pdf', '.rna_demux.hist.pdf', '.background_probabilities.bar.pdf')) {
-			i <- paste0(outPath, name)
-			plot(magick::image_read_pdf(i))
+		#for (name in c('.ambient_hashtag.hist.pdf', '.real_content.hist.pdf', '.rna_demux.hist.pdf', '.background_probabilities.bar.pdf')) {
+		#	i <- paste0(outPath, name)
+		#	plot(magick::image_read_pdf(i))
 			#unlink(i)
-		}
+		#}
 
 		unlink(inputHtoFile)
 		unlink(outPath)
